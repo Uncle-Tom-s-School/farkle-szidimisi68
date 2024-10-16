@@ -1,0 +1,31 @@
+.dice-container {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .dice {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #333;
+    font-size: 24px;
+    cursor: pointer;
+    user-select: none;
+  }
+  
+  .dice.selected {
+    background-color: #4caf50; /* Green for selected dice */
+    color: white;
+  }
+  
+  .dice.inactive {
+    background-color: gray; /* Gray for inactive dice */
+    color: #ccc; /* Lighter text color */
+    cursor: not-allowed; /* Show not-allowed cursor */
+    }
+
+    .die:hover {
+    background-color: #d9d9d9;
+    }

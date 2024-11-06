@@ -1,75 +1,126 @@
+/* General Styles */
 .App {
-    text-align: center;
-    background-color: #f8f9fa;
-    padding: 20px;
-  }
-  
-  h1 {
-    color: #333;
-  }
-  
-  .player {
-    border: 2px solid #333;
-    border-radius: 8px;
-    padding: 10px;
-    margin: 10px;
-    background-color: #e0e0e0;
-  }
-  
-  .player.active {
-    background-color: #c8e6c9; /* Greenish when active */
-  }
-  
-  .dice-container {
-    display: flex;
-    justify-content: center;
-    margin: 20px 0;
-  }
-  
-  .die {
-    width: 50px;
-    height: 50px;
-    margin: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #f0f0f0;
-    border: 2px solid #ccc;
-    border-radius: 10px;
-    font-size: 24px;
-    cursor: pointer;
-    transition: background-color 0.2s;
-  }
-  
-  .die:hover {
-    background-color: #d9d9d9;
-  }
-  
-  .die.selected {
-    background-color: #4caf50; /* Green for selected dice */
-    color: white;
-    border: 2px solid #388e3c; /* Darker green border */
-  }
-  
-  .die.inactive {
-    background-color: #e0e0e0; /* Light gray for inactive dice */
-    color: #999; /* Darker gray text */
-    cursor: not-allowed; /* Not-allowed cursor for inactive dice */
-  }
-  
+  text-align: center;
+  background: url('https://www.transparenttextures.com/patterns/old-map.png'); /* Parchment-style background */
+  background-color: #f4f1e1; /* Light beige for parchment look */
+  padding: 20px;
+  font-family: 'Cinzel', serif; /* Medieval font */
+}
 
-  .game-controls {
-    margin: 20px;
-  }
-  
-  button {
-    padding: 10px 20px;
-    margin: 5px;
-    font-size: 16px;
-    cursor: pointer;
-  }
-  
-  button:hover {
-    background-color: #ddd;
-  }
-  
+h1 {
+  color: #4e342e; /* Dark brown */
+  font-size: 48px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+h3 {
+  font-size: 24px;
+  color: #3e2723;
+  font-family: 'Cinzel', serif;
+}
+
+/* Player Styles */
+.player {
+  border: 2px solid #3e2723; /* Dark border */
+  border-radius: 8px;
+  padding: 20px;
+  margin: 20px;
+  background-color: #d7ccc8; /* Light stone color */
+  font-size: 20px;
+  font-family: 'Cinzel', serif;
+  color: #3e2723;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.player.active {
+  background-color: #8d6e63; /* Medieval brown for active player */
+  color: #fff;
+  font-weight: bold;
+}
+
+/* Dice Container */
+.dice-container {
+  display: flex;
+  justify-content: center;
+  margin: 30px 0;
+}
+
+/* Dice Styles */
+.dice {
+  width: 60px;
+  height: 60px;
+  margin: 10px;
+  background-color: #f5f5f5; /* Light stone for dice background */
+  border: 2px solid #8d6e63; /* Dark brown border */
+  border-radius: 12px;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-family: 'Cinzel', serif;
+}
+
+.dice:hover {
+  background-color: #c5e1a5; /* Light green on hover */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.dice.selected {
+  background-color: #ffd54f; /* Gold color for selected dice */
+  color: #3e2723; /* Dark brown */
+  border: 2px solid #c65100; /* Dark gold border */
+}
+
+.dice.locked {
+  opacity: 0.5;
+  cursor: not-allowed;
+  background-color: #bdbdbd; /* Gray for locked dice */
+}
+
+/* Button Styles */
+button {
+  padding: 15px 30px;
+  margin: 10px;
+  background-color: #8d6e63;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+  font-family: 'Cinzel', serif;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+button:hover {
+  background-color: #6d4c41; /* Darker brown when hovered */
+}
+
+button:disabled {
+  background-color: #e0e0e0;
+  cursor: not-allowed;
+}
+
+/* Game Controls */
+.game-controls {
+  margin: 30px;
+}
+
+/* Add Scrollbars with medieval themed design */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f0e6d2;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #8d6e63;
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #5d4037;
+}
